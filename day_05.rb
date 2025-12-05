@@ -62,7 +62,7 @@ while range_a_idx < fresh_ranges.length - 1
 
     # If there was a merge, iterate over range_a again, since the merge could cause previous ranges we checked to need to merge now
     # Example: (10 -> 14) vs. (16 -> 20) = no merge
-    #          (10 -> 14) vs. (12 -> 18) = merge, but no we need to go back and check (10 -> 18) vs. (16 -> 20) again since they will merge
+    #          (10 -> 14) vs. (12 -> 18) = merge, but now we need to go back and check (10 -> 18) vs. (16 -> 20) again since they will merge
     if not did_merge
         range_a_idx += 1
     end
